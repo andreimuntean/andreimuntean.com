@@ -1,0 +1,20 @@
+{
+    "Name": "Andrei Muntean",
+    "Profession": "Software Engineer",
+    "Company": "Google",
+    "Location": "London, United Kingdom",
+    "Birthday": "July 31",
+    "Preferences": {
+        "Band": "Radiohead",
+        "Color": "Black",
+        "Digimon": "Phantomon",
+        "Pokemon": "Mewtwo"
+    },
+    "Links": {
+        "Facebook": "https://facebook.com/archonus",
+        "GitHub": "https://github.com/andreimuntean",
+        "Instagram": "https://instagram.com/_andreimuntean",
+        "LinkedIn": "https://linkedin.com/in/andreidev",
+        "Twitter": "https://twitter.com/_andreimuntean"
+    }
+}

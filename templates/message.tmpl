@@ -1,0 +1,13 @@
+{{ define "head" }}
+    <title>{{ .Title }} | andreimuntean</title>
+{{ end }}
+
+
+{{ define "content" }}
+    <section id="message">
+        <h1>{{ .Title }}</h1>
+        <div class="response">
+            <p>{{ .Message }}</p>
+        </div>
+    </section>
+{{ end }}

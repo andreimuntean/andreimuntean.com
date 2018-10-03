@@ -1,0 +1,33 @@
+{{ define "layout" }}
+    <!doctype html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta name="description" content="The website of andreimuntean@." />
+            <meta name="robots" content="index,follow" />
+            <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+            <link rel="stylesheet" type="text/css" href="assets/css/layout.css" />
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({
+                    google_ad_client: "ca-pub-5089386830685380",
+                    enable_page_level_ads: true
+                });
+            </script>
+            {{ template "head" . }}
+        </head>
+        <body>
+            <header>
+                <a href="/">
+                    <h1>andreimuntean.com</h1>
+                    <h2>A legitimate website</h2>
+                </a>
+            </header>
+            {{ template "content" . }}
+            {{ template "scripts" . }}
+        </body>
+    </html>
+{{ end }}
+
+// Set default values for optional blocks.
+{{ define "scripts" }}{{ end }}
