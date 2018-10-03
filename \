@@ -12,6 +12,7 @@ import (
 func main() {
 	initializeAssets()
 	setUpRoutes()
+	startServer()
 	appengine.Main()
 }
 
@@ -26,6 +27,12 @@ func setUpRoutes() {
 	templateDirectory := filepath.Join(dir, "templates")
 
 	if err := handlers.Execute(templateDirectory); err != nil {
+		log.Fatal(err)
+	}
+}
+
+func startServer() {
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal(err)
 	}
 }
