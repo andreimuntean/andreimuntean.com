@@ -18,7 +18,10 @@ var templates map[string]*template.Template
 
 // Execute loads templates from the specified directory and configures routes.
 func Execute(templateDirectory string) error {
-	loadTemplates(templateDirectory)
+	if err := loadTemplates(templateDirectory); err != nil {
+		return err
+	}
+
 	setUpRoutes()
 
 	return nil
@@ -52,5 +55,11 @@ func loadTemplates(templateDirectory string) error {
 
 func setUpRoutes() {
 	http.HandleFunc("/", index)
+	http.HandleFunc("/alpha", alpha)
+	http.HandleFunc("/beta", beta)
+	http.HandleFunc("/gamma", gamma)
+	http.HandleFunc("/delta", delta)
+	http.HandleFunc("/epsilon", epsilon)
+	http.HandleFunc("/omega", omega)
 	http.HandleFunc("/robots.txt", robots)
 }
