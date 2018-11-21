@@ -43,6 +43,7 @@ section {
         padding: 30px 130px; padding: 30px 14vw;
     }
 
+
 nav {
     position: absolute;
     top: 0;
@@ -88,3 +89,9 @@ header {
         margin: 10px;
         color: #fff;
     }
+
+
+.adsbygoogle {
+    display: block;
+    text-align: center;
+}
