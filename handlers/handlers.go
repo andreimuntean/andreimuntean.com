@@ -55,6 +55,7 @@ func loadTemplates(templateDirectory string) error {
 
 func setUpRoutes() {
 	http.HandleFunc("/", index)
+	http.HandleFunc("/ads.txt", ads)
 	http.HandleFunc("/alpha", alpha)
 	http.HandleFunc("/beta", beta)
 	http.HandleFunc("/gamma", gamma)
