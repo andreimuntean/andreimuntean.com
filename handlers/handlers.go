@@ -54,7 +54,6 @@ func loadTemplates(templateDirectory string) error {
 }
 
 func setUpRoutes() {
-	http.HandleFunc("/", index)
 	http.HandleFunc("/ads.txt", ads)
 	http.HandleFunc("/alpha", alpha)
 	http.HandleFunc("/beta", beta)
@@ -64,4 +63,8 @@ func setUpRoutes() {
 	http.HandleFunc("/omega", omega)
 	http.HandleFunc("/portfolio", portfolio)
 	http.HandleFunc("/robots.txt", robots)
+
+	// The following routes end in "/" to allow "/route/example".
+	http.HandleFunc("/", index)
+	http.HandleFunc("/storage/", storage)
 }
