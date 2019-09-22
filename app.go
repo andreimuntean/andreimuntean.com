@@ -2,7 +2,7 @@ package main
 
 import (
 	"andreimuntean.com/handlers"
-	"google.golang.org/appengine"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -12,7 +12,7 @@ import (
 func main() {
 	initializeAssets()
 	setUpRoutes()
-	appengine.Main()
+	startServer()
 }
 
 func initializeAssets() {
@@ -28,4 +28,15 @@ func setUpRoutes() {
 	if err := handlers.Execute(templateDirectory); err != nil {
 		log.Fatal(err)
 	}
+}
+
+func startServer() {
+	port := os.Getenv("PORT")
+	if port == "" {
+			port = "8080"
+			log.Printf("Defaulting to port %s", port)
+	}
+
+	log.Printf("Listening on port %s", port)
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
 }
