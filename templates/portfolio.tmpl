@@ -1,0 +1,29 @@
+{{ define "head" }}
+    <title>Portfolio | andreimuntean</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/portfolio.css" />
+{{ end }}
+
+{{ define "content" }}
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <div>
+            {{ range .Photos }}
+                <a href="https://storage.googleapis.com/andreimuntean/{{ .ID }}">
+                    <div class="photo-box">
+                        <div class="photo-box-top-half">
+                            <img class="photo-box-thumbnail" src="https://storage.googleapis.com/andreimuntean/{{ .ID }}">
+                        </div>
+                        <div class="photo-box-bottom-half">
+                            <div class="photo-box-field">
+                                {{ .Name }}
+                            </div>
+                            <div class="photo-box-field">
+                                {{ .Date }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {{ end }}
+        </div>
+    </section>
+{{ end }}

@@ -62,5 +62,6 @@ func setUpRoutes() {
 	http.HandleFunc("/delta", delta)
 	http.HandleFunc("/epsilon", epsilon)
 	http.HandleFunc("/omega", omega)
+	http.HandleFunc("/portfolio", portfolio)
 	http.HandleFunc("/robots.txt", robots)
 }
