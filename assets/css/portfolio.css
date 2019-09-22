@@ -5,8 +5,8 @@ a {
 
 .photo-box {
     display: inline-block;
-    width: 25%;
-    height: 25%;
+    width: 300px;
+    height: 300px;
     border-style: solid;
     border-width: 1px;
     margin: 5px;
@@ -14,20 +14,23 @@ a {
 
 
 .photo-box-top-half {
+    display: table-cell;
     background-color: black;
-    height: 75%;
+    width: 300px;
+    height: 265px;
     border-bottom: 1px solid black;
+    vertical-align: middle;
 }
 
     .photo-box-thumbnail {
         max-width: 100%;
         max-height: 100%;
         display: block;
+        margin: auto;
     }
 
 
 .photo-box-bottom-half {
-    height: 25%;
     padding: 6px 0;
 }
 
