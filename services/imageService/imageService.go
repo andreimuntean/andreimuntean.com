@@ -30,7 +30,7 @@ func DownscaleImage(img image.Image, size uint) image.Image {
 	height := img.Bounds().Dy()
 
 	if width > height {
-		return resize.Resize(size, 0, img, resize.Lanczos3)
+		return resize.Resize(size, 0, img, resize.NearestNeighbor)
 	}
-	return resize.Resize(0, size, img, resize.Lanczos3)
+	return resize.Resize(0, size, img, resize.NearestNeighbor)
 }
