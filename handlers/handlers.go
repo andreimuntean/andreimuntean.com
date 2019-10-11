@@ -61,7 +61,12 @@ func setUpRoutes() {
 	http.HandleFunc("/delta", delta)
 	http.HandleFunc("/epsilon", epsilon)
 	http.HandleFunc("/omega", omega)
-	http.HandleFunc("/portfolio", portfolio)
+
+	http.HandleFunc("/images", photos)
+	http.HandleFunc("/photos", photos)
+	http.HandleFunc("/pictures", photos)
+	http.HandleFunc("/portfolio", photos)
+
 	http.HandleFunc("/robots.txt", robots)
 
 	// The following routes end in "/" to allow "/route/example".

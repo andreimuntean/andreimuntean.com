@@ -19,7 +19,7 @@ var model struct {
 }
 
 func init() {
-	path, _ := filepath.Abs("assets/json/portfolio.json")
+	path, _ := filepath.Abs("assets/json/photos.json")
 	file, e := ioutil.ReadFile(path)
 
 	if e != nil {
@@ -29,6 +29,6 @@ func init() {
 	json.Unmarshal(file, &model.Photos)
 }
 
-func portfolio(w http.ResponseWriter, r *http.Request) {
-	templates["portfolio"].ExecuteTemplate(w, "layout", &model)
+func photos(w http.ResponseWriter, r *http.Request) {
+	templates["photos"].ExecuteTemplate(w, "layout", &model)
 }
