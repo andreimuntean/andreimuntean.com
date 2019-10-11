@@ -9,13 +9,13 @@ import (
 )
 
 type photo struct {
-	ID          string
-	Name        string
-	Date        string
+	ID   string
+	Name string
+	Date string
 }
 
 var model struct {
-	Photos		[]photo
+	Photos []photo
 }
 
 func init() {
