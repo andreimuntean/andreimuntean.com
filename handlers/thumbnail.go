@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"../services/imageService"
+	"andreimuntean.com/services/imageService"
 	"image"
 	"image/jpeg"
 	"net/http"
