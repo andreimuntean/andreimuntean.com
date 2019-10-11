@@ -72,4 +72,5 @@ func setUpRoutes() {
 	// The following routes end in "/" to allow "/route/example".
 	http.HandleFunc("/", index)
 	http.HandleFunc("/storage/", storage)
+	http.HandleFunc("/thumbnail/", thumbnail)
 }
