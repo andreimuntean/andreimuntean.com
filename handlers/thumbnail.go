@@ -1,24 +1,25 @@
 package handlers
 
 import (
+	"andreimuntean.com/services/cacheService"
 	"andreimuntean.com/services/imageService"
-	"image"
-	"image/jpeg"
+	"golang.org/x/net/context"
+	"google.golang.org/appengine"
 	"net/http"
 	"strings"
 )
 
-var cachedThumbnails map[string]image.Image = make(map[string]image.Image)
-
-func getThumbnailForId(id string) image.Image {
-	if cachedThumbnails[id] == nil {
-		cachedThumbnails[id] = imageService.CreateThumbnailFromUrl("https://storage.googleapis.com/andreimuntean/" + id)
+func getThumbnailForId(c context.Context, id string) []byte {
+	img := cacheService.Get(c, id)
+	if img == nil {
+		img = imageService.CreateThumbnailFromUrl("https://storage.googleapis.com/andreimuntean/" + id)
+		cacheService.Add(c, id, img)
 	}
-
-	return cachedThumbnails[id]
+	return img
 }
 
 func thumbnail(w http.ResponseWriter, r *http.Request) {
+	c := appengine.NewContext(r)
 	id := strings.Split(r.URL.Path, "/")[2]
-	jpeg.Encode(w, getThumbnailForId(id), nil)
+	w.Write(getThumbnailForId(c, id))
 }
