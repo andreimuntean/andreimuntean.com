@@ -3,6 +3,7 @@ package main
 import (
 	"andreimuntean.com/handlers"
 	"fmt"
+	"google.golang.org/appengine"
 	"log"
 	"net/http"
 	"os"
@@ -12,6 +13,7 @@ import (
 func main() {
 	initializeAssets()
 	setUpRoutes()
+	appengine.Main()
 	startServer()
 }
 
