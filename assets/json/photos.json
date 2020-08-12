@@ -1,5 +1,25 @@
 [
     {
+        "Id": "par-3aY6",
+        "Name": "Paris, France",
+        "Date": "2020 July 22"
+    },
+    {
+        "Id": "bru-qC83",
+        "Name": "Bruges, Belgium",
+        "Date": "2020 February 14"
+    },
+    {
+        "Id": "bru-C27w",
+        "Name": "Bruges, Belgium",
+        "Date": "2020 February 14"
+    },
+    {
+        "Id": "lon-iD95",
+        "Name": "London, UK",
+        "Date": "2020 January 20"
+    },
+    {
         "Id": "flr-t3H0",
         "Name": "Florence, Italy",
         "Date": "2019 November 4"
@@ -55,9 +75,19 @@
         "Date": "2019 August 24"
     },
     {
+        "Id": "los-2uC8",
+        "Name": "Los Angeles, US",
+        "Date": "2019 August 18"
+    },
+    {
         "Id": "los-0x1C",
         "Name": "Los Angeles, US",
         "Date": "2019 August 17"
+    },
+    {
+        "Id": "los-2nC5",
+        "Name": "Los Angeles, US",
+        "Date": "2019 August 15"
     },
     {
         "Id": "lon-P94z",
